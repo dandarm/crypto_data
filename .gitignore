@@ -9,5 +9,7 @@ resampled/
 
 .idea/
 
+!download_data_scripts/data
+
 *.csv
 *.zip
