@@ -1,0 +1,13 @@
+__pycache__
+
+data/
+resampled/
+
+.*/       # Esclude tutte le cartelle nascoste
+.*        # Esclude tutti i file nascosti
+!.gitignore # Include il file .gitignore
+
+.idea/
+
+*.csv
+*.zip
