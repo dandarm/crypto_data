@@ -952,6 +952,8 @@ class Exchange:
                 trades.extend(t[:-1])
             else:
                 return (pair, None)
+
+        last_printed_month = None  # per customizzare il messaggio durante il download
         while True:
             t = await self._async_fetch_trades(pair, params={self._trades_pagination_arg: from_id})
             if t:
@@ -964,7 +966,14 @@ class Exchange:
                     trades.extend(t[-1:])
                     break
 
-                print(datetime.fromtimestamp(trades[-1][0] / 1000))
+                timestamp_milliseconds = trades[-1][0]
+                datetime_object = datetime.fromtimestamp(timestamp_milliseconds / 1000)
+                #current_datetime = datetime.strptime(str(int(ts)), "%Y-%m-%d %H:%M:%S.%f")
+                if last_printed_month is None or datetime_object.month > last_printed_month:
+                    print(datetime_object)
+                    last_printed_month = datetime_object.month
+                else: print('.',end="")
+
                 from_id = int(t[-1][1])
             else:
                 break

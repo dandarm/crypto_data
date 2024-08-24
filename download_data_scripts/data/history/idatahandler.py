@@ -142,6 +142,7 @@ class IDataHandler(ABC):
         #return trades_remove_duplicates(self._trades_load(pair, timerange=timerange))
         return self._trades_load(pair, timerange=timerange)
 
+
     def ohlcv_load(self, pair, timeframe: str,
                    timerange,  #: Optional[TimeRange] = None,
                    fill_missing: bool = True,

@@ -276,12 +276,13 @@ def _download_trades_history(exchange: Exchange,
         # trovo il "from_id" e il "since"
         if trades.empty:
             from_id = 1
-            until = 1625464801081.0  #  5 luglio 2021: se la crypto non è mai stata scaricata non voglio scaricarla tutta insieme per evitare errori per la lunga durata
+            until = 1534358028000.0  # 15-8-2018     1625464801081.0  #  5 luglio 2021: se la crypto non è mai stata scaricata non voglio scaricarla tutta insieme per evitare errori per la lunga durata
         else:
             from_id = trades['trade_id'].iloc[-1]
 
             time_trades = trades['timestamp']
-            until = None
+            one_month = 60*60*24*30
+            until = (time_trades.iloc[-1].timestamp() + one_month*3 ) * 1000
 
             if since < time_trades.iloc[0].timestamp() * 1000:
                 # since is before the first trade

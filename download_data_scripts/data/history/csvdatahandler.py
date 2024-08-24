@@ -1,5 +1,6 @@
 import logging
 import re
+import io
 from pathlib import Path
 from typing import List, Optional
 
@@ -186,11 +187,12 @@ class CSVDataHandler(IDataHandler):
             return pd.DataFrame()  # Return an empty DataFrame if the file does not exist
 
         # Load the CSV file into a DataFrame
-        df = pd.read_csv(filename, parse_dates=['timestamp'], infer_datetime_format=True)
+        #df = pd.read_csv(filename, parse_dates=['timestamp'], infer_datetime_format=True)
+        df = self.load_only_last_row(filename)
 
         # Optional: filter data based on the timerange
-        if timerange:
-            df = df[(df['timestamp'] >= timerange.start) & (df['timestamp'] <= timerange.end)]
+        #if timerange:
+        #    df = df[(df['timestamp'] >= timerange.start) & (df['timestamp'] <= timerange.end)]
 
         # Convert DataFrame to list of dictionaries (TradeList)
         #trade_list = df.to_dict('records')
@@ -202,6 +204,29 @@ class CSVDataHandler(IDataHandler):
         #     tradesdata = trades_dict_to_list(tradesdata)
         #     pass
         # return tradesdata
+
+    def load_only_last_row(self, filename):
+        # Leggi la prima riga per ottenere i titoli delle colonne
+        with open(filename, 'r') as f:
+            column_names = f.readline().strip().split(',')
+
+        # Apri il file in modalità 'rb' (read binary) e posiziona il puntatore alla fine
+        with open(filename, 'rb') as f:
+            # Vai alla fine del file
+            f.seek(-2, 2)
+            # Muoviti indietro fino a trovare una nuova riga
+            while f.read(1) != b'\n':
+                f.seek(-2, 1)
+            # Leggi l'ultima riga
+            last_line = f.readline().decode()
+
+        # Carica l'ultima riga in un DataFrame
+        df_last_row = pd.read_csv(io.StringIO(last_line), header=None)
+        df_last_row.columns = column_names
+        # Effettua il parsing della colonna 'timestamp' come datetime
+        df_last_row['timestamp'] = pd.to_datetime(df_last_row['timestamp'], infer_datetime_format=True)
+
+        return df_last_row
 
     def trades_purge(self, pair: str) -> bool:
         """
