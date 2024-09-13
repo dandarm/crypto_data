@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Dict
 
 #from download_data_scripts.iprotection import IProtection
-from download_data_scripts.resolvers import IResolver
+from resolvers import IResolver
 
 
 logger = logging.getLogger(__name__)

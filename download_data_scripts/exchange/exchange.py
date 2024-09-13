@@ -18,15 +18,15 @@ from ccxt.base.decimal_to_precision import (ROUND_DOWN, ROUND_UP, TICK_SIZE, TRU
                                             decimal_to_precision)
 from pandas import DataFrame
 
-from download_data_scripts.constants import DEFAULT_AMOUNT_RESERVE_PERCENT, ListPairsWithTimeframes
-from download_data_scripts.data.converter import ohlcv_to_dataframe, trades_dict_to_list
-from download_data_scripts.exceptions import (DDosProtection, ExchangeError, InsufficientFundsError,InvalidOrderException, OperationalException, RetryableOrderError,
-                                  TemporaryError)
-from download_data_scripts.exchange.common import (API_FETCH_ORDER_RETRY_COUNT, BAD_EXCHANGES,
-                                       EXCHANGE_HAS_OPTIONAL, EXCHANGE_HAS_REQUIRED, retrier,
-                                       retrier_async)
-from download_data_scripts.misc import deep_merge_dicts, safe_value_fallback2
-from download_data_scripts.pairlist_helpers import expand_pairlist
+from constants import DEFAULT_AMOUNT_RESERVE_PERCENT, ListPairsWithTimeframes
+from data.converter import ohlcv_to_dataframe, trades_dict_to_list
+from exceptions import (DDosProtection, ExchangeError, InsufficientFundsError,InvalidOrderException, OperationalException, RetryableOrderError,
+            TemporaryError)
+from exchange.common import (API_FETCH_ORDER_RETRY_COUNT, BAD_EXCHANGES,
+                 EXCHANGE_HAS_OPTIONAL, EXCHANGE_HAS_REQUIRED, retrier,
+                 retrier_async)
+from misc import deep_merge_dicts, safe_value_fallback2
+from pairlist_helpers import expand_pairlist
 
 
 CcxtModuleType = Any

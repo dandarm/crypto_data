@@ -13,9 +13,9 @@ from typing import List, Optional, Type
 from pandas import DataFrame
 
 #from download_data_scripts.configuration import TimeRange
-from download_data_scripts.constants import ListPairsWithTimeframes, TradeList
-from download_data_scripts.data.converter import clean_ohlcv_dataframe, trades_remove_duplicates, trim_dataframe
-from download_data_scripts.exchange import timeframe_to_seconds
+from constants import ListPairsWithTimeframes, TradeList
+from data.converter import clean_ohlcv_dataframe, trades_remove_duplicates, trim_dataframe
+from exchange import timeframe_to_seconds
 
 
 logger = logging.getLogger(__name__)

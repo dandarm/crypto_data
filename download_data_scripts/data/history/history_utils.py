@@ -9,13 +9,13 @@ import pandas as pd
 from pandas import DataFrame
 
 #from download_data_scripts.configuration import TimeRange
-from download_data_scripts.constants import DEFAULT_DATAFRAME_COLUMNS
-from download_data_scripts.data.converter import (clean_ohlcv_dataframe, ohlcv_to_dataframe,
-                                      trades_remove_duplicates, trades_to_ohlcv)
-from download_data_scripts.data.history.idatahandler import IDataHandler, get_datahandler
-from download_data_scripts.exceptions import OperationalException
-from download_data_scripts.exchange import Exchange
-from download_data_scripts.misc import format_ms_time
+from constants import DEFAULT_DATAFRAME_COLUMNS
+from data.converter import (clean_ohlcv_dataframe, ohlcv_to_dataframe,
+                trades_remove_duplicates, trades_to_ohlcv)
+from data.history.idatahandler import IDataHandler, get_datahandler
+from exceptions import OperationalException
+from exchange import Exchange
+from misc import format_ms_time
 
 
 logger = logging.getLogger(__name__)

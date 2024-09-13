@@ -8,10 +8,10 @@ import numpy as np
 import pandas as pd
 from pandas import DataFrame, to_datetime
 
-from download_data_scripts import misc
-#from download_data_scripts.configuration import TimeRange
-from download_data_scripts.constants import DEFAULT_DATAFRAME_COLUMNS, ListPairsWithTimeframes, TradeList
-from download_data_scripts.data.converter import trades_dict_to_list
+import misc
+#from configuration import TimeRange
+from constants import DEFAULT_DATAFRAME_COLUMNS, ListPairsWithTimeframes, TradeList
+from data.converter import trades_dict_to_list
 
 from .idatahandler import IDataHandler
 

@@ -3,9 +3,9 @@ This module loads custom exchanges
 """
 import logging
 
-import download_data_scripts.exchange as exchanges
-from download_data_scripts.exchange import MAP_EXCHANGE_CHILDCLASS, Exchange
-from download_data_scripts.resolvers import IResolver
+import exchange as exchanges
+from exchange import MAP_EXCHANGE_CHILDCLASS, Exchange
+from resolvers import IResolver
 
 
 logger = logging.getLogger(__name__)

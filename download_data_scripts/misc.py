@@ -11,7 +11,7 @@ from typing.io import IO
 
 import rapidjson
 
-from download_data_scripts.constants import DECIMAL_PER_COIN_FALLBACK, DECIMALS_PER_COIN
+from constants import DECIMAL_PER_COIN_FALLBACK, DECIMALS_PER_COIN
 
 
 logger = logging.getLogger(__name__)

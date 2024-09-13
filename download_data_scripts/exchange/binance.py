@@ -4,10 +4,10 @@ from typing import Dict
 
 import ccxt
 
-from download_data_scripts.exceptions import (DDosProtection, InsufficientFundsError, InvalidOrderException,
-                                  OperationalException, TemporaryError)
-from download_data_scripts.exchange import Exchange
-from download_data_scripts.exchange.common import retrier
+from exceptions import (DDosProtection, InsufficientFundsError, InvalidOrderException,
+            OperationalException, TemporaryError)
+from exchange import Exchange
+from exchange.common import retrier
 
 
 logger = logging.getLogger(__name__)

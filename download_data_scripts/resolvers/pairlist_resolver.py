@@ -6,8 +6,8 @@ This module load custom pairlists
 import logging
 from pathlib import Path
 
-from download_data_scripts.IPairList import IPairList
-from download_data_scripts.resolvers import IResolver
+from IPairList import IPairList
+from resolvers import IResolver
 
 
 logger = logging.getLogger(__name__)

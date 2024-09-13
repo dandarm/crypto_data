@@ -3,7 +3,7 @@ import logging
 import time
 from functools import wraps
 
-from download_data_scripts.exceptions import DDosProtection, RetryableOrderError, TemporaryError
+from exceptions import DDosProtection, RetryableOrderError, TemporaryError
 
 
 logger = logging.getLogger(__name__)

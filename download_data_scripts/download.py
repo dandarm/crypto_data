@@ -1,9 +1,9 @@
 from typing import Any, Callable, Dict, List, Optional
 from pathlib import Path
 from Configuration import Configuration
-from download_data_scripts.resolvers.exchange_resolver import ExchangeResolver
-from download_data_scripts.pairlist_helpers import expand_pairlist
-from download_data_scripts.data.history import (convert_trades_to_ohlcv, refresh_backtest_ohlcv_data,
+from resolvers.exchange_resolver import ExchangeResolver
+from pairlist_helpers import expand_pairlist
+from data.history import (convert_trades_to_ohlcv, refresh_backtest_ohlcv_data,
                                     refresh_backtest_trades_data)
 
 def setup_utils_configuration(args: Dict[str, Any]) -> Dict[str, Any]:

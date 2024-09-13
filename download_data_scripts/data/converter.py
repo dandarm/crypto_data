@@ -10,7 +10,7 @@ from typing import Any, Dict, List
 import pandas as pd
 from pandas import DataFrame, to_datetime
 
-from download_data_scripts.constants import DEFAULT_DATAFRAME_COLUMNS, DEFAULT_TRADES_COLUMNS, TradeList
+from constants import DEFAULT_DATAFRAME_COLUMNS, DEFAULT_TRADES_COLUMNS, TradeList
 
 
 logger = logging.getLogger(__name__)

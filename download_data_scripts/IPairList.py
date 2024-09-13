@@ -6,9 +6,9 @@ from abc import ABC, abstractmethod, abstractproperty
 from copy import deepcopy
 from typing import Any, Dict, List
 
-from download_data_scripts.exceptions import OperationalException
-from download_data_scripts.exchange import market_is_active
-from download_data_scripts.logging_mixin import LoggingMixin
+from exceptions import OperationalException
+from exchange import market_is_active
+from logging_mixin import LoggingMixin
 
 
 logger = logging.getLogger(__name__)

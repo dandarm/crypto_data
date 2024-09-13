@@ -49,11 +49,11 @@
             "BTC/BUSD",
             "BTC/EUR"
         ],
-      "pair_whitelist": [ "ETC/USDT", "FET/USDT", "STX/USDT", "HBAR/USDT",
+      "0": [ "ETC/USDT", "FET/USDT", "STX/USDT", "HBAR/USDT",
           "FIL/USDT", "FDUSD/USDT", "ATOM/USDT",  "IMX/USDT", "VET/USDT",  "MKR/USDT",
            "INJ/USDT", "AAVE/USDT", "AR/USDT", "GRT/USDT",
-          "THETA/USDT", "JASMY/USDT", "RUNE/USDT"],
-      "1": [
+          "THETA/USDT", "RUNE/USDT"],
+      "pair_whitelist": [
           "TWT/USDT", "CAKE/USDT",  "APE/USDT", "LPT/USDT", "CKB/USDT", "KAVA/USDT", "COMP/USDT", "IOTX/USDT",  "JTO/USDT",
         "PEOPLE/USDT", "CRV/USDT", "DASH/USDT", "WOO/USDT", "ELF/USDT", "MANTA/USDT", "PORTAL/USDT",  "LOOM/USDT",  "ALICE/USDT"],
       "2": ["MEME/USDT", "ANKR/USDT", "GMT/USDT", "SC/USDT", "BAT/USDT", "ZIL/USDT", "HOT/USDT", "MBOX/USDT", "TKO/USDT",
@@ -96,7 +96,7 @@
           "SPELL/USDT", "CTK/USDT", "STMX/USDT", "MOVR/USDT", "OXT/USDT", "CYBER/USDT", "RIF/USDT", "REQ/USDT",
           "OMNI/USDT", "HOOK/USDT", "HFT/USDT", "DODO/USDT", "AEUR/USDT", "ARDR/USDT", "PHB/USDT", "SYN/USDT",
        "OP/USDT", "FLOKI/USDT", "APT/USDT", "SUI/USDT", "ARB/USDT", ",TAO/USDT" ,"RENDER/USDT", "WIF/USDT", "BONK/USDT",
-        "PYTH/USDT", "TIA/USDT", "NOT/USDT", "JUP/USDT", "ICP/USDT", "UNI/USDT", "PEPE/USDT", "XLM/USDT"
+        "PYTH/USDT", "TIA/USDT", "NOT/USDT", "JUP/USDT", "ICP/USDT", "UNI/USDT", "PEPE/USDT", "XLM/USDT", "JASMY/USDT"
       ],
 
 
